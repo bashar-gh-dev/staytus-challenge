@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          colors: {
+            grey: "#717173",
+            "light-grey": "#a1a1a9",
+            "lighter-grey": "#e4e4e6",
+            "dark-grey": "#3f4045",
+            "darker-grey": "#27272a",
+            yellow: "#efca4f",
+            white: "#fbfbfb",
+            yellow: "#e9c555",
+            black: "#000000",
+            red: "#ff0000",
+          },
+          fontFamily: {
+            sans: ["Roboto"],
+          },
+          extend: {
+            boxShadow: {
+              DEFAULT: "0px 5px 10px 0px rgba(239, 202, 79, 0.5)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="reset.css" />
+    <title>Document</title>
+  </head>
+  <body class="roboto bg-light-grey dark:bg-black">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" type="module"></script>
+    <label class="text-black dark:text-white">
+      <input type="radio" value="black" name="theme-switch" />
+      Dark background
+    </label>
+    <label class="text-black dark:text-white">
+      <input type="radio" value="white" name="theme-switch" />
+      Light background
+    </label>
+    <div id="content" class="container mx-auto text-white">
+      <p class="text-black dark:text-white">Loading planets ...</p>
+    </div>
+  </body>
+</html>
